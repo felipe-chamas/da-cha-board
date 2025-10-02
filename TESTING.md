@@ -3,22 +3,26 @@
 ## Setup Required
 
 ### 1. Environment
+
 - [ ] Copy `.env.example` to `.env.local`
 - [ ] Add Supabase credentials
 - [ ] Run `npm install` (all deps present)
 
 ### 2. Database
+
 - [ ] Run `supabase/schema.sql` in Supabase SQL Editor
 - [ ] Create test business record
 - [ ] Verify RLS policies enabled
 
 ### 3. Optional Integrations (can skip for basic testing)
+
 - [ ] WhatsApp: Add Meta credentials (for WhatsApp bot)
 - [ ] Google Calendar: Add OAuth credentials (for calendar sync)
 
 ## Local Test Flow
 
 ### Basic Calendar Functions
+
 1. [ ] `npm run dev` → http://localhost:3000
 2. [ ] Navigate to Taimeline service section
 3. [ ] Add employee (name, schedule hours)
@@ -29,6 +33,7 @@
 8. [ ] Delete event
 
 ### Time Slot Manager
+
 1. [ ] Open TimeSlotManager
 2. [ ] Drag procedure cards to time slots
 3. [ ] Create schedule blocks
@@ -36,6 +41,7 @@
 5. [ ] Save schedule template
 
 ### WhatsApp Integration (requires Meta setup)
+
 1. [ ] Configure webhook: `/api/whatsapp/webhook`
 2. [ ] Send test message to business number
 3. [ ] Verify bot responds with procedure list
@@ -45,6 +51,7 @@
 7. [ ] Verify WhatsApp confirmation sent
 
 ### Google Calendar Sync (requires OAuth setup)
+
 1. [ ] Open CalendarSettings
 2. [ ] Connect Google account
 3. [ ] Create event in Taimeline
@@ -55,6 +62,7 @@
 ## Current Status
 
 ✅ **Complete & Ready**:
+
 - UI components (all calendar views)
 - Database schema
 - Type definitions
@@ -64,6 +72,7 @@
 - Brazilian phone formatting
 
 ⚠️ **Needs Testing**:
+
 - Supabase connection (add .env)
 - CRUD operations flow
 - Conflict detection logic
@@ -71,6 +80,7 @@
 - Google OAuth flow
 
 🔧 **Known Issues**:
+
 - TODOs in TaimelineCalendar.tsx (mock data → real API)
 - CalendarSettings save function (placeholder)
 - EmployeeSidebar add dialog (commented)
@@ -89,6 +99,7 @@ http://localhost:3000
 ## Minimal Test (No External APIs)
 
 Just test UI/navigation:
+
 1. Skip .env setup initially
 2. Run dev server
 3. Navigate UI components
